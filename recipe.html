@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+       <!--  <script type="text/javascript" src="cordova.js"></script>  -->
+
+        <link rel="stylesheet" type = "text/css" href = "style.css">
+        <script type="text/javascript">
+
+
+             <!-- Setup Lifecycle Events -->
+        window.addEventListener('load', loaded);
+
+        function pause() {
+            alert("Pause");
+        }
+
+        function resume() {
+            alert("Resume");
+        }
+
+        function ready() {
+            //this is the place where you want to program
+            alert("Hello Hello");
+            document.addEventListener('resume', appResume);
+            document.addEventListener('pause', appPause);
+
+            document.getElementById("inputdosearch").addEventListener('click', searchClicked);
+
+        }
+
+        function searchClicked() {
+
+            window.location.href = "searchresults.html"
+
+        }
+
+        function loaded() {
+            //Cordova is ready for native integration/plugins/cordova specific
+            document.addEventListener('deviceready', ready)
+        }
+
+    </script>
+
+    <!--     <link rel="stylesheet" type="text/css" href="css/index.css">  my own style sheel-->
+        <title>YAMAY</title>
+    </head>
+    <body>
+
+        <div class = "Recipeheader">
+    
+            <image src = "images/back.png" class = "backbtn">
+            <image src = "images/hamburgermenu.png" class = "hamright">
+            <p class = "pagetitle"> RECIPE </p>
+
+        </div>
+
+        <div class = "main">
+            <img src = "images/c2.png" class = "userimg"><br/>
+            <img src = "images/omelet.jpeg" class = "foodimg">
+            
+            <img src = "images/time_15m.png" class = "timeicon">
+            <p class = "time"> 15m </p>
+            <p class = "recipetitle"> EGG FRIED RICE </p>
+            <img src = "images/like.png" class = "like">
+        </div>
+
+        <div class = "recipe_in">
+                <li class = "recipe_in_have"> 1-2 eggs </li>
+                <li class = "recipe_in_have"> 1/2-1 garlic </li>
+                <li class = "recipe_in_have"> 1/4 onion </li>
+                <li class = "recipe_in_have"> salt </li>
+                <li class = "recipe_in_have"> pepper </li>
+                <li class = "recipe_in_have"> oyster sauce </li>
+                <li class = "recipe_in_donthave"> rice </li>
+        </div>
+
+        <div class = "recipeContent">
+                <li class = "recipeOrder" id = "r01"> Heat oil in a medium skillet or wok over medium heat.  </li>
+                <li class = "recipeOrder" id = "r02"> Saute onions and garlics for 2 to 3 minutes.  </li>
+                <li class = "recipeOrder" id = "r03">  Pour in egg and fry for 2 minutes, scrambling egg while it cooks. </li>
+                <li class = "recipeOrder" id = "r04"> Stir in the cooked rice, mix well and sprinkle with oyster sauce and pepper. </li>
+
+            <input type = "button" value = "MADE IT" class = "madeit"><br/>
+        </div>
+
+        <div class = "recipe_btm_bar">
+            <image src = "images/share.png" class = "share">
+            <image src = "images/camera.png" class = "camera">
+            <image src = "images/comments.png" class = "comments">
+        </div>
+
+    </body>
+</html>

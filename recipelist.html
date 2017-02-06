@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+       <!--  <script type="text/javascript" src="cordova.js"></script>  -->
+        <script type="text/javascript">
+            <!-- Setup Lifecycle Events -->
+        window.addEventListener('load', loaded);
+
+        function pause() {
+            alert("Pause");
+        }
+
+        function resume() {
+            alert("Resume");
+        }
+
+        function ready() {
+            //this is the place where you want to program
+            alert("Hello Hello");
+            document.addEventListener('resume', appResume);
+            document.addEventListener('pause', appPause);
+
+            document.getElementById("inputdosearch").addEventListener('click', searchClicked);
+
+        }
+
+        function searchClicked() {
+
+            window.location.href = "searchresults.html"
+
+        }
+
+        function loaded() {
+            //Cordova is ready for native integration/plugins/cordova specific
+            document.addEventListener('deviceready', ready)
+        }
+
+    </script>
+
+    <style>
+        #map {
+
+            width: 500px;
+            height: 500px;
+            background-color: black;
+
+        }
+    </style>
+    <!--     <link rel="stylesheet" type="text/css" href="css/index.css">  my own style sheel-->
+        <title>YAMAY</title>
+    </head>
+    <body>
+
+        <div>
+            <h1 class = "heading"> RECIPE </h1>
+            <input type = "button" value = "back" class = "back">
+            <input type = "button" value = "hamburgermenu" class = "hamburgermenu">
+        </div>
+
+    <div class = "w_in">
+        <h1> WITH YOUR INGREDIENTS </h1>
+    </div>
+
+    <div class = "recipe_lists">
+        <img src = "omelet.jpeg" class = "foodimg">
+        <h1> Scrammbled Eggs </h1>
+        <p> 2 eggs </p>
+        <p> 1 cup of spinach </p>
+        <p> 1, 1/2 Tbs parmesan </p>
+        <p> salt </p>
+        <p> pepper </p>
+        <p> parmesan </p>
+        <p> onion powder </p>
+    </div>
+
+    <div class = "recipe_lists">
+        <img src = "omelet.jpeg" class = "foodimg">
+        <h1> Spinach Omelet </h1>
+        <p> 2 eggs </p>
+        <p> 1 cup of spinach </p>
+        <p> 1, 1/2 Tbs parmesan </p>
+        <p> salt </p>
+        <p> pepper </p>
+        <p> parmesan </p>
+        <p> onion powder </p>
+    </div>
+
+    <div class = "recipe_lists">
+        <img src = "omelet.jpeg" class = "foodimg">
+        <h1> Potato Salad </h1>
+        <p> 2 eggs </p>
+        <p> 1 cup of spinach </p>
+        <p> 1, 1/2 Tbs parmesan </p>
+        <p> salt </p>
+        <p> pepper </p>
+        <p> parmesan </p>
+        <p> onion powder </p>
+    </div>
+
+    <div class = "recipe_lists">
+        <img src = "omelet.jpeg" class = "foodimg">
+        <h1> Ramen Pasta </h1>
+        <p> 2 eggs </p>
+        <p> 1 cup of spinach </p>
+        <p> 1, 1/2 Tbs parmesan </p>
+        <p> salt </p>
+        <p> pepper </p>
+        <p> parmesan </p>
+        <p> onion powder </p>
+    </div>
+
+    <div class = "recipe_lists">
+        <img src = "omelet.jpeg" class = "foodimg">
+        <h1> Egg Fried Rice </h1>
+        <p> 2 eggs </p>
+        <p> 1 cup of spinach </p>
+        <p> 1, 1/2 Tbs parmesan </p>
+        <p> salt </p>
+        <p> pepper </p>
+        <p> parmesan </p>
+        <p> onion powder </p>
+    </div>
+
+    <div class = "recipe_list_btm_bar">
+        <input type = "button" value = "add" class = "add">
+    </div>
+
+    </body>
+</html>

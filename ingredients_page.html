@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="style.css">
+       <!--  <script type="text/javascript" src="cordova.js"></script>  -->
+        <script type="text/javascript">
+            <!-- Setup Lifecycle Events -->
+        window.addEventListener('load', loaded);
+
+        function pause() {
+            alert("Pause");
+        }
+
+        function resume() {
+            alert("Resume");
+        }
+
+        function ready() {
+            //this is the place where you want to program
+            alert("Hello Hello");
+            document.addEventListener('resume', appResume);
+            document.addEventListener('pause', appPause);
+
+            document.getElementById("inputdosearch").addEventListener('click', searchClicked);
+
+        }
+
+        function searchClicked() {
+
+            window.location.href = "searchresults.html"
+
+        }
+
+        function loaded() {
+            //Cordova is ready for native integration/plugins/cordova specific
+            document.addEventListener('deviceready', ready)
+        }
+
+    </script>
+
+    <!--     <link rel="stylesheet" type="text/css" href="css/index.css">  my own style sheel-->
+        <title>YAMAY</title>
+    </head>
+    <body>
+
+        <div class = "header">
+            <image src = "images/hamburgermenu.png" class = "hamburgermenu">
+            <image src = "images/search.png" class = "searchicon">
+            <p class = "pagetitle"> INGREDIENTS </p>
+        </div>
+
+    <div id = "category">
+        
+            <image src = "images/dividingline.png" class = "line">
+            <li class = "cate"> FRUITS </li>
+            <image src = "images/dividingline.png" class = "line">
+            <li class = "cate"> VEGETABLES </li>
+            <image src = "images/dividingline.png" class = "line">
+            <li class = "cate"> MEAT </li>
+            <image src = "images/dividingline.png" class = "line">
+            <li class = "cate" id = "dairy"> DAIRY & EGGS <br/>
+                    <div class = "circlediv"> 
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+
+                        <input type = "button" value = "whole milk" class = "ingredients">
+                        <input type = "button" value = "butter" class = "ingredients">
+                        <input type = "button" value = "egg" class = "ingredients"> 
+                        <input type = "button" value = "cheddar" class = "ingredients"> 
+                        <input type = "button" value = "mozzarella" class = "ingredients"><br/>
+                    </div>
+
+                    <div class = "circlediv"> 
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+                        <image src = "images/c1.png" class = "circle"></image>
+
+                        <input type = "button" value = "margarine" class = "ingredients"> 
+                        <input type = "button" value = "cream cheese" class = "ingredients">
+                        <input type = "button" value = "yogurt" class = "ingredients"> 
+                        <input type = "button" value = "soy milk" class = "ingredients"> 
+                        <input type = "button" value = "parmesan" class = "ingredients">
+                    </div>
+                </li>
+
+            <image src = "images/dividingline.png" class = "line">
+            <li class = "cate"> SEAFOODS </li>
+            <image src = "images/dividingline.png" class = "line">
+            <li class="cate"> NUTS </li>
+        
+    </div>
+
+    <div>
+        <input type = "button" value = "DONE" class = "donebtn"><br/>
+
+    </body>
+</html>
