@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="style.css">
+       <!--  <script type="text/javascript" src="cordova.js"></script>  -->
+        <script type="text/javascript">
+        
+            <!-- Setup Lifecycle Events -->
+        window.addEventListener('load', loaded);
+
+        function pause() {
+            alert("Pause");
+        }
+
+        function resume() {
+            alert("Resume");
+        }
+
+        function ready() {
+            //this is the place where you want to program
+            alert("Hello Hello");
+            document.addEventListener('resume', appResume);
+            document.addEventListener('pause', appPause);
+
+            document.getElementById("inputdosearch").addEventListener('click', searchClicked);
+
+        }
+
+        function searchClicked() {
+
+            window.location.href = "searchresults.html"
+
+        }
+
+        function loaded() {
+            //Cordova is ready for native integration/plugins/cordova specific
+            document.addEventListener('deviceready', ready)
+        }
+
+    </script>
+
+    <!--     <link rel="stylesheet" type="text/css" href="css/index.css">  my own style sheel-->
+        <title>YAMAY</title>
+    </head>
+    <body>
+    	
+	    <div class = "login">
+	        <input type = "text" value = "user name" class = "textbox" id = "inputusername">
+	        <br/>
+	        <input type = "text" value = "password" class = "textbox" id = "inputpassword">
+	        <br/>
+	        <input type = "button" value = "LOG IN" class = "loginbox" id = "inputlogin">
+    	    <div class = "newkitchen">
+                <p>New Kitchen?</p>
+            </div>
+        </div>
+
+	    
+    </body>
+</html>
